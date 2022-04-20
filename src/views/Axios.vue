@@ -5,9 +5,9 @@
       <el-card class="box-card">
         <template #header>
           <div class="card-header">
-            <span>XPoet</span>
+            <span>Webnizer</span>
             <el-button class="button" type="text" @click="getUserInfo"
-              >点击获取XPoet信息
+              >ibelem @ github
             </el-button>
           </div>
         </template>
@@ -34,7 +34,7 @@ export default defineComponent({
     const getUserInfo = () => {
       loading.value = true
       axios
-        .get('/users/XPoet')
+        .get('/users/ibelem')
         .then((response) => {
           console.log('response: ', response.data)
           userInfo.value = response.data
