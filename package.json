@@ -2,9 +2,9 @@
   "name": "webnizer-portal",
   "version": "0.0.1",
   "private": false,
-  "description": "webnizer Portal",
+  "description": "Webnizer Portal",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "concurrently \"node server/server.js\" \"vite --host\"",
     "build": "vite build",
     "build-tsc": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
@@ -22,9 +22,9 @@
     "Vite",
     "Vue3",
     "TypeScript",
-    "Starter"
+    "Webnizer"
   ],
-  "author": "XPoet",
+  "author": "Belem",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ibelem/webnizer-portal/issues"
@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "axios": "^0.26.1",
+    "cors": "^2.8.5",
     "element-plus": "^2.1.10",
     "express": "^4.17.3",
     "express-graphql": "^0.12.0",
@@ -59,6 +60,7 @@
     "@vue/test-utils": "^2.0.0-rc.20",
     "@vue/vue3-jest": "^27.0.0-alpha.4",
     "commitizen": "^4.2.4",
+    "concurrently": "^7.1.0",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^6.3.0",
     "eslint": "^8.13.0",

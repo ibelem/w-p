@@ -12,6 +12,7 @@
           </div>
         </template>
         <div class="info-list-box" v-loading="loading">
+          <div class="text item">{{ userInfo }}</div>
           <div class="text item" v-if="userInfo?.name">name: {{ userInfo?.name }}</div>
           <div class="text item" v-if="userInfo?.bio">bio: {{ userInfo?.bio }}</div>
           <div class="text item" v-if="userInfo?.blog">blog: {{ userInfo?.blog }}</div>
@@ -34,10 +35,19 @@ export default defineComponent({
     const getUserInfo = () => {
       loading.value = true
       axios
-        .get('/users/ibelem')
+        // .get('/users/ibelem')
+        .post('/graphql', {
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          "query": "{ hello }"
+        })
         .then((response) => {
           console.log('response: ', response.data)
-          userInfo.value = response.data
+          let res = response.data
+          console.log(res.data.hello)
+          userInfo.value = res.data.hello
           loading.value = false
         })
         .catch((error) => {
