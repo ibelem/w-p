@@ -10,15 +10,15 @@
 </template>
 
 <script lang="ts" setup>
-import { useRouter } from 'vue-router'
+import { useRouter } from 'vue-router';
 
 // eslint-disable-next-line no-unused-vars
-const router = useRouter()
+const router = useRouter();
 
 // eslint-disable-next-line no-unused-vars
 const goGitHub = () => {
-  window.open('https://github.com/ibelem/webnizer-portal/')
-}
+  window.open('https://github.com/ibelem/webnizer-portal/');
+};
 </script>
 
 <style scoped lang="stylus">

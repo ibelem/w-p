@@ -8,29 +8,31 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, computed, toRefs } from 'vue'
-import { useStore } from '../store'
+import {
+  defineComponent, reactive, computed, toRefs,
+} from 'vue';
+import { useStore } from '../store/index';
 
 export default defineComponent({
-  name: 'Vuex',
+  name: 'VuexPage',
 
   setup() {
-    const store = useStore()
+    const store = useStore();
     const reactiveData = reactive({
       text: computed(() => store.state.text),
-      count: computed(() => store.state.numFactoryModule.count)
-    })
+      count: computed(() => store.state.numFactoryModule.count),
+    });
 
     const double = () => {
-      store.commit('numFactoryModule/DOUBLE_COUNT')
-    }
+      store.commit('numFactoryModule/DOUBLE_COUNT');
+    };
 
     return {
       ...toRefs(reactiveData),
-      double
-    }
-  }
-})
+      double,
+    };
+  },
+});
 </script>
 
 <style scoped lang="stylus"></style>

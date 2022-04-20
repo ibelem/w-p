@@ -23,46 +23,46 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, Ref } from 'vue'
-import axios from '../utils/axios'
+import { defineComponent, ref, Ref } from 'vue';
+import axios from '../utils/axios';
 
 export default defineComponent({
-  name: 'Axios',
+  name: 'AxiosPage',
   setup() {
-    const userInfo: Ref = ref(null)
-    const loading = ref(false)
+    const userInfo: Ref = ref(null);
+    const loading = ref(false);
 
     const getUserInfo = () => {
-      loading.value = true
+      loading.value = true;
       axios
         // .get('/users/ibelem')
         .post('/graphql', {
           headers: {
             'Content-Type': 'application/json',
-            'Accept': 'application/json',
+            Accept: 'application/json',
           },
-          "query": "{ hello }"
+          query: '{ hello }',
         })
         .then((response) => {
-          console.log('response: ', response.data)
-          let res = response.data
-          console.log(res.data.hello)
-          userInfo.value = res.data.hello
-          loading.value = false
+          console.log('response: ', response.data);
+          const res = response.data;
+          console.log(res.data.hello);
+          userInfo.value = res.data.hello;
+          loading.value = false;
         })
         .catch((error) => {
-          loading.value = false
-          console.error(error)
-        })
-    }
+          loading.value = false;
+          console.error(error);
+        });
+    };
 
     return {
       userInfo,
       loading,
-      getUserInfo
-    }
-  }
-})
+      getUserInfo,
+    };
+  },
+});
 </script>
 
 <style scoped lang="stylus">
