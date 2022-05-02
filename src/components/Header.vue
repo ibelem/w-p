@@ -1,58 +1,42 @@
 <template>
-  <div class="header">
-    <div class="title" @click="router.push('/')">Webnizer</div>
-    <div class="go-github" @click="goGitHub">
-      <i class="icon el-icon-s-promotion"></i> GitHub
-    </div>
-  </div>
+  <header>
+    <a class="logo" href="#/">Webnizer</a>
+    <Nav />
+  </header>
 </template>
 
 <script lang="ts" setup>
-import { useRouter } from "vue-router";
+import { useRouter } from 'vue-router';
+</script>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+import Nav from './Nav.vue';
 
 // eslint-disable-next-line no-unused-vars
 const router = useRouter();
 
-// eslint-disable-next-line no-unused-vars
-const goGitHub = () => {
-  window.open("https://github.com/ibelem/webnizer-portal/");
-};
-</script>
-
-<script lang="ts">
-import { defineComponent } from "vue";
 export default defineComponent({
-  name: "HeaderPage",
-  // components: {
-  //   Calendar,
-  // },
+  name: 'HeaderComp',
+  components: {
+    Nav,
+    //   Calendar,
+  },
 });
 </script>
 
 <style scoped lang="stylus">
-.header {
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  box-sizing: border-box;
-  font-weight: bold;
+header {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  grid-column-gap: 0px
+  grid-row-gap: 0px
+  justify-items: stretch
+  align-items: center
 
-  .title {
-    font-size: 20px;
+  .logo {
     cursor: pointer;
-  }
-
-  .go-github {
-    cursor: pointer;
-    font-size: 16px;
-
-    .icon {
-      font-size: 20px;
-    }
+    display: inline-block;
   }
 }
 </style>

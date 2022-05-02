@@ -1,7 +1,6 @@
 <template>
-  <div class="home-container page-container">
-    <img class="vue-element-plus-logo" alt="Vue logo" src="../assets/logo.png" />
-    <div class="page-title">Home</div>
+  <div class="">
+    <div>Home</div>
     <!-- <Calendar /> -->
   </div>
 </template>
@@ -19,9 +18,4 @@ export default defineComponent({
 </script>
 
 <style scoped lang="stylus">
-.home-container {
-  .vue-element-plus-logo {
-    width 20%
-  }
-}
 </style>

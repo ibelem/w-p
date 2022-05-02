@@ -1,5 +1,5 @@
 <template>
-  <div class="axios-container page-container">
+  <div>
     <div class="page-title">Axios Test Page</div>
     <div class="user-info-container">
       <el-card class="box-card">

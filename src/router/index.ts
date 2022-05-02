@@ -4,6 +4,7 @@ import {
 import Home from '@/views/Home.vue';
 import Vuex from '@/views/Vuex.vue';
 import Test from '@/views/Test.vue';
+import Editor from '@/views/Editor.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -19,12 +20,17 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/axios',
     name: 'Axios',
-    component: () => import('@/views/Axios.vue'), // 懒加载 Axios 组件
+    component: () => import('@/views/Axios.vue'),
   },
   {
     path: '/test',
     name: 'Test',
     component: Test,
+  },
+  {
+    path: '/editor',
+    name: 'Editor',
+    component: Editor,
   },
 ];
 

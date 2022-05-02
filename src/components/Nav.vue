@@ -1,8 +1,7 @@
 <template>
-  <aside class="nav">
-    <ul class="nav-list">
+  <nav>
+    <ul>
       <li
-        class="nav-item flex-center"
         v-for="(nav, index) in navList"
         :key="index"
         :class="{ active: nav.isActive }"
@@ -11,7 +10,7 @@
         {{ nav.name }}
       </li>
     </ul>
-  </aside>
+  </nav>
 </template>
 
 <script lang="ts">
@@ -22,7 +21,7 @@ import { useRouter } from 'vue-router';
 import { NavItem } from '../common/types';
 
 export default defineComponent({
-  name: 'NavComponent',
+  name: 'NavComp',
 
   setup() {
     const router = useRouter();
@@ -48,6 +47,11 @@ export default defineComponent({
           name: 'Test',
           isActive: false,
           path: '/test',
+        },
+        {
+          name: 'Editor',
+          isActive: false,
+          path: '/editor',
         },
       ],
 
@@ -85,32 +89,17 @@ export default defineComponent({
 </script>
 
 <style scoped lang="stylus">
+@import '../style/basic.styl';
 
-@import "../style/basic.styl"
-
-.nav {
-  position relative
-  width 100%
-  height 100%
-  box-sizing border-box
-  background: #fff
-
-  .nav-list {
-
-    .nav-item {
-      box-sizing border-box
-      width 100%
-      height 60px
-      cursor pointer
-
-      &.active {
-        font-weight bold
-        background $second-background-color
+nav {
+  justify-self: end;
+  ul li {
+    display inline-block
+    padding 10px 20px
+    cursor pointer
+    &.active {
+        background: $second-background-color;
       }
-
-    }
-
   }
-
 }
 </style>
