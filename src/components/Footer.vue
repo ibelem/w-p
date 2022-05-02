@@ -14,3 +14,8 @@ export default defineComponent({
   components: {},
 });
 </script>
+<style scoped lang="stylus">
+footer {
+  height: 40px;
+}
+</style>

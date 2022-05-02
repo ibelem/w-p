@@ -4,7 +4,7 @@ import {
 import Home from '@/views/Home.vue';
 import Vuex from '@/views/Vuex.vue';
 import Test from '@/views/Test.vue';
-import Editor from '@/views/Editor.vue';
+import Editor from '@/views/EditorPage.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
