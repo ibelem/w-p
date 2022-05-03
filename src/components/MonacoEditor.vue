@@ -117,7 +117,4 @@ onUnmounted(() => {
 </script>
 
 <style>
-#editorcontainer {
-  height: calc(100vh - 160px);
-}
 </style>

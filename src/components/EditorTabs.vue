@@ -1,12 +1,7 @@
 <template>
   <div>
-    <a
-      v-for="item in items"
-      :key="item.value"
-      :class="props.modelValue === item.value ? 'tab-item-active' : 'tab-item'"
-      href="#"
-      @click.prevent="emit('update:modelValue', item.value)"
-    >
+    <a v-for="item in items" :key="item.value" :class="props.modelValue === item.value ? 'tab-item-active' : 'tab-item'"
+      href="#" @click.prevent="emit('update:modelValue', item.value)">
       {{ item.text }}
     </a>
   </div>

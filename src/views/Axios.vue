@@ -27,7 +27,7 @@ import { defineComponent, ref, Ref } from 'vue';
 import axios from '../utils/axios';
 
 export default defineComponent({
-  name: 'AxiosPage',
+  name: 'AxiosView',
   setup() {
     const userInfo: Ref = ref(null);
     const loading = ref(false);

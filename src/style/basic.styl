@@ -1,12 +1,90 @@
-$font-color = #2c3e50
+$font-color = rgb(55 65 81)
 $background-color = #fff
 $second-background-color = #f1f1f1
+
+/* poppins-200 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  src: local(''),
+       url('../src/assets/fonts/poppins/poppins-v20-latin-200.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../src/assets/fonts/poppins/poppins-v20-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-200italic - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 200;
+  src: local(''),
+       url('../src/assets/fonts/poppins/poppins-v20-latin-200italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../src/assets/fonts/poppins/poppins-v20-latin-200italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-300 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+       url('../src/assets/fonts/poppins/poppins-v20-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../src/assets/fonts/poppins/poppins-v20-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-300italic - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 300;
+  src: local(''),
+       url('../src/assets/fonts/poppins/poppins-v20-latin-300italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../src/assets/fonts/poppins/poppins-v20-latin-300italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../src/assets/fonts/poppins/poppins-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../src/assets/fonts/poppins/poppins-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-italic - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+       url('../src/assets/fonts/poppins/poppins-v20-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../src/assets/fonts/poppins/poppins-v20-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-500 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('../src/assets/fonts/poppins/poppins-v20-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../src/assets/fonts/poppins/poppins-v20-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-600 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('../src/assets/fonts/poppins/poppins-v20-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../src/assets/fonts/poppins/poppins-v20-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
 html, body {
   color $font-color
   margin 0
   padding 0
-  font-size 12px
+  font-size 14px
+  font-family Poppins, Avenir, Helvetica, Arial, sans-serif
+}
+
+header {
+  padding: 2rem 1rem 1rem 1rem;
 }
 
 ul,
@@ -24,9 +102,25 @@ ol {
 }
 
 .content {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 150px);
+}
+
+#editorcontainer {
+  height: calc(100vh - 200px);
 }
 
 .decorationsOverviewRuler, .monaco-scrollable-element > .scrollbar {
   width: 8px !important;
+}
+ 
+.home {
+  height: 60vh;
+  background: linear-gradient(169.4deg,rgba(57,132,244,.1) -6.01%,rgba(12,211,255,.1) 36.87%,rgba(47,124,240,.1) 78.04%, rgba(14,101,232,.1) 103.77%);
+}
+
+.home h3 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  font-weight: 300;
 }

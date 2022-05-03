@@ -1,8 +1,8 @@
 <template>
   <div class="monacoeditor">
     <EditorTabs :items="items" v-model="currentTab" />
-    <CodeEditor :activeTab="currentTab" />
-    <!-- <CodeEditor :activeTab="currentTab" @change="onChange" /> -->
+    <MonacoEditor :activeTab="currentTab" />
+    <!-- <MonacoEditor :activeTab="currentTab" @change="onChange" /> -->
     <!-- <iframe ref="iframe" class="" sandbox="allow-scripts" frameBorder="0"></iframe> -->
   </div>
 </template>
@@ -15,7 +15,7 @@
 import { ref } from 'vue';
 import { useStorage } from '@vueuse/core';
 import { StorageName } from '../utils';
-import CodeEditor from '@/components/CodeEditor.vue';
+import MonacoEditor from '@/components/MonacoEditor.vue';
 import EditorTabs from '@/components/EditorTabs.vue';
 
 // const iframe = ref<HTMLIFrameElement>();

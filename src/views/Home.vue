@@ -1,21 +1,22 @@
 <template>
-  <div class="">
-    <div>Home</div>
-    <!-- <Calendar /> -->
+  <div>
+    <Hero />
+    <Feature />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-// import Calendar from '../components/Calendar.vue';
+import Hero from '@/components/HomeHero.vue';
+import Feature from '@/components/HomeFeature.vue';
 
 export default defineComponent({
-  name: 'HomePage',
-  // components: {
-  //   Calendar,
-  // },
+  name: 'HomeView',
+  components: {
+    Hero,
+    Feature,
+  },
 });
 </script>
 
-<style scoped lang="stylus">
-</style>
+<style scoped lang="stylus"></style>

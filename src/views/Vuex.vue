@@ -14,10 +14,11 @@ import {
 import { useStore } from '../store/index';
 
 export default defineComponent({
-  name: 'VuexPage',
+  name: 'VuexView',
 
   setup() {
     const store = useStore();
+
     const reactiveData = reactive({
       text: computed(() => store.state.text),
       count: computed(() => store.state.numFactoryModule.count),

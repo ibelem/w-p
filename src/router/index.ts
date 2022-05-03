@@ -4,13 +4,19 @@ import {
 import Home from '@/views/Home.vue';
 import Vuex from '@/views/Vuex.vue';
 import Test from '@/views/Test.vue';
-import Editor from '@/views/EditorPage.vue';
+import Editor from '@/views/Editor.vue';
+import Libs from '@/views/Libs.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
     component: Home,
+  },
+  {
+    path: '/libs',
+    name: 'Libs',
+    component: Libs,
   },
   {
     path: '/vuex',
