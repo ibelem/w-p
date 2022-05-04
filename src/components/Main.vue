@@ -1,6 +1,6 @@
 <template>
-  <main :class="{ 'home': ishome}">
-    <div>
+  <main :class="{ 'home': ishome }">
+    <div class="header">
       <Header />
     </div>
     <div class="content">
@@ -61,4 +61,8 @@ export default defineComponent({
 
 <style scoped lang="stylus">
   @import '../style/basic.styl';
+  .header, .home .content {
+    margin: 0 auto;
+    text-align: center;
+  }
 </style>

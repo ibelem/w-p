@@ -105,6 +105,31 @@ ol {
   height: calc(100vh - 150px);
 }
 
+.home .content {
+  height: auto;
+}
+
+#hero {
+  display: none;
+}
+
+.home #hero {
+  display: grid;
+}
+
+.home #wrap.onScroll header {
+  position: sticky;
+  padding: 0rem 1rem;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: rgba(255, 255, 255, 0.9);
+  ul li {
+    color: rgb(55 65 81);
+  }
+}
+
 #editorcontainer {
   height: calc(100vh - 200px);
 }
@@ -113,9 +138,20 @@ ol {
   width: 8px !important;
 }
  
-.home {
-  height: 60vh;
-  background: linear-gradient(169.4deg,rgba(57,132,244,.1) -6.01%,rgba(12,211,255,.1) 36.87%,rgba(47,124,240,.1) 78.04%, rgba(14,101,232,.1) 103.77%);
+#wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  background: none;
+}
+
+.home .header {
+  background-image: linear-gradient(21deg, #0cd3ff 68%, #30F197 163%), linear-gradient(163deg, #30F197 86%, #e406f9 40%), linear-gradient(0deg, #e406f9 122%, #0cd3ff 169%), linear-gradient(45deg, #0cd3ff 64%, #30F197 43%);
+  background-blend-mode: overlay, multiply, color, normal;
+  color: rgba(255, 255, 255, 1.0);
 }
 
 .home h3 {

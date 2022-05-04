@@ -1,16 +1,18 @@
 <template>
   <footer>
-    <div>&copy;2022 Webnizer</div>
-    <ul>
-      <li
-        v-for="(nav, index) in navList"
-        :key="index"
-        :class="{ active: nav.isActive }"
-        @click="navClick(nav)"
-      >
-        {{ nav.name }}
-      </li>
-    </ul>
+    <div>
+      <div>&copy;2022 Webnizer</div>
+      <ul>
+        <li
+          v-for="(nav, index) in navList"
+          :key="index"
+          :class="{ active: nav.isActive }"
+          @click="navClick(nav)"
+        >
+          {{ nav.name }}
+        </li>
+      </ul>
+    </div>
   </footer>
 </template>
 
@@ -87,8 +89,12 @@ export default defineComponent({
 </script>
 <style scoped lang="stylus">
 footer {
+  max-width: 1280px;
   height: 40px;
+  color: rgb(55 65 81);
   padding: 0 1rem 1rem 1rem;
+  margin: 0 auto;
+  text-align: center;
 
   div, ul, ul li {
     display inline-block

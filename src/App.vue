@@ -15,6 +15,9 @@ export default defineComponent({
 </script>
 
 <style lang="stylus">
+html {
+  scroll-behavior smooth
+}
 #app {
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale

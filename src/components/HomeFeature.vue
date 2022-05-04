@@ -2,7 +2,51 @@
   <div id="feature">
     <h3>Feature</h3>
     <div>
-
+      <div>HHH</div>
+      <div>HHH</div>
+      <div>HHH</div>
+    </div>
+    <h3>Feature</h3>
+    <div>
+      <div>HHH</div>
+      <div>HHH</div>
+      <div>HHH</div>
+    </div>
+        <h3>Feature</h3>
+    <div>
+      <div>HHH</div>
+      <div>HHH</div>
+      <div>HHH</div>
+    </div>
+    <h3>Feature</h3>
+    <div>
+      <div>HHH</div>
+      <div>HHH</div>
+      <div>HHH</div>
+    </div>
+        <h3>Feature</h3>
+    <div>
+      <div>HHH</div>
+      <div>HHH</div>
+      <div>HHH</div>
+    </div>
+    <h3>Feature</h3>
+    <div>
+      <div>HHH</div>
+      <div>HHH</div>
+      <div>HHH</div>
+    </div>
+        <h3>Feature</h3>
+    <div>
+      <div>HHH</div>
+      <div>HHH</div>
+      <div>HHH</div>
+    </div>
+    <h3>Feature</h3>
+    <div>
+      <div>HHH</div>
+      <div>HHH</div>
+      <div>HHH</div>
     </div>
   </div>
 </template>
@@ -12,6 +56,7 @@
 <style scoped lang="stylus">
 #feature {
   text-align center
-  margin-top 4rem
+  margin 4rem auto
+  color: rgb(55 65 81);
 }
 </style>
