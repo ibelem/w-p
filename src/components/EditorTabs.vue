@@ -24,7 +24,7 @@ const emit = defineEmits<(e: 'update:modelValue', tab: string) => void>();
 .tab-item {
     display: inline-block;
     padding: 1rem 1rem;
-    color: rgb(55 65 81);
+    color: #333;
 }
 
 .tab-item-active {

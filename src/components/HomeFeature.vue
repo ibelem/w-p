@@ -57,6 +57,6 @@
 #feature {
   text-align center
   margin 4rem auto
-  color: rgb(55 65 81);
+  color: #333;
 }
 </style>

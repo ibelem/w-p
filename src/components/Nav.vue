@@ -43,6 +43,11 @@ export default defineComponent({
           isActive: false,
           path: '/editor',
         },
+        {
+          name: 'Docs',
+          isActive: false,
+          path: '/docs',
+        },
       ],
 
       navClick(e: NavItem) {
@@ -98,17 +103,21 @@ nav {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #61a3ff;
-    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: relative;
     left: 0;
-    bottom: 3px; /* this is to match where the border is */
+    bottom: -1.6rem;
     transform-origin: left;
     transform: scale(0);
     transition: 0.25s linear;
-    /*   will-change: transform; */
+  }
+
+  li:hover {
+    color: #000;
   }
 
   li:hover:before {
+    color: #ffffff;
     transform: scale(1);
   }
 }

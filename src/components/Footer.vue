@@ -91,7 +91,7 @@ export default defineComponent({
 footer {
   max-width: 1280px;
   height: 40px;
-  color: rgb(55 65 81);
+  color: #333;
   padding: 0 1rem 1rem 1rem;
   margin: 0 auto;
   text-align: center;
