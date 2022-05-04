@@ -3,7 +3,7 @@
     <div class="page-title">Vuex Test Page</div>
     <p>store Root is: {{ text }}</p>
     <p>store doubleCount is: {{ count }}</p>
-    <el-button type="primary" @click="double">double</el-button>
+    <button type="button" @click="double">double</button>
   </div>
 </template>
 

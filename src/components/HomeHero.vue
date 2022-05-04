@@ -27,19 +27,19 @@ export default defineComponent({
   components: {},
   setup() {
     onMounted(() => {
-      setInterval(() => {
-        const show = document.querySelector('#hero span[data-show]');
-        const up = document.querySelector('#hero span[data-up]');
-        const next = show.nextElementSibling || document.querySelector('#hero span:first-child');
-        if (next) {
-          if (up) {
-            up.removeAttribute('data-up');
-          }
-          show.removeAttribute('data-show');
-          show.setAttribute('data-up', '');
-          next.setAttribute('data-show', '');
-        }
-      }, 2000);
+      // setInterval(() => {
+      //   const show = document.querySelector('#hero span[data-show]');
+      //   const up = document.querySelector('#hero span[data-up]');
+      //   const next = show.nextElementSibling || document.querySelector('#hero span:first-child');
+      //   if (next) {
+      //     if (up) {
+      //       up.removeAttribute('data-up');
+      //     }
+      //     show.removeAttribute('data-show');
+      //     show.setAttribute('data-up', '');
+      //     next.setAttribute('data-show', '');
+      //   }
+      // }, 2000);
     });
   },
 });

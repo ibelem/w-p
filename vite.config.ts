@@ -1,7 +1,5 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import importElementPlus from 'vite-plugin-element-plus';
-
 // install @types/node -> npm i @types/node -D if no path module
 import { resolve } from 'path';
 
@@ -9,7 +7,7 @@ const prefix = 'monaco-editor/esm/vs';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), importElementPlus({})],
+  plugins: [vue()],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'), // set `@` point to `src` folder

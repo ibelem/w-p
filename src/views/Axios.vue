@@ -1,23 +1,11 @@
 <template>
   <div>
-    <div class="page-title">Axios Test Page</div>
-    <div class="user-info-container">
-      <el-card class="box-card">
-        <template #header>
-          <div class="card-header">
-            <span>Webnizer</span>
-            <el-button class="button" type="text" @click="getUserInfo"
-              >ibelem @ github
-            </el-button>
-          </div>
-        </template>
-        <div class="info-list-box" v-loading="loading">
-          <div class="text item">{{ userInfo }}</div>
-          <div class="text item" v-if="userInfo?.name">name: {{ userInfo?.name }}</div>
-          <div class="text item" v-if="userInfo?.bio">bio: {{ userInfo?.bio }}</div>
-          <div class="text item" v-if="userInfo?.blog">blog: {{ userInfo?.blog }}</div>
-        </div>
-      </el-card>
+    <button type="button" @click="getUserInfo">ibelem</button>
+    <div class="info-list-box" v-if="userInfo">
+      <div class="text item">{{ userInfo }}</div>
+      <!-- <div class="text item">name: {{ userInfo?.name }}</div>
+      <div class="text item">bio: {{ userInfo?.bio }}</div>
+      <div class="text item">blog: {{ userInfo?.blog }}</div> -->
     </div>
   </div>
 </template>
@@ -30,10 +18,8 @@ export default defineComponent({
   name: 'AxiosView',
   setup() {
     const userInfo: Ref = ref(null);
-    const loading = ref(false);
 
     const getUserInfo = () => {
-      loading.value = true;
       axios
         // .get('/users/ibelem')
         .post('/graphql', {
@@ -48,56 +34,18 @@ export default defineComponent({
           const res = response.data;
           console.log(res.data.hello);
           userInfo.value = res.data.hello;
-          loading.value = false;
         })
         .catch((error) => {
-          loading.value = false;
           console.error(error);
         });
     };
 
     return {
       userInfo,
-      loading,
       getUserInfo,
     };
   },
 });
 </script>
 
-<style scoped lang="stylus">
-
-.axios-container {
-
-  .user-info-container {
-    display flex
-    justify-content center
-    width 100%
-
-    .info-list-box {
-      padding 10px
-
-      .text {
-        font-size: 14px;
-      }
-
-      .item {
-        margin-bottom: 18px;
-      }
-
-    }
-
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .box-card {
-      width: 480px;
-    }
-
-  }
-
-}
-</style>
+<style scoped lang="stylus"></style>
