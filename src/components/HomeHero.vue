@@ -23,22 +23,20 @@
           <rect class="cls-1" x="1.5" y="99.5" width="144" height="78" rx="3" /><text class="cls-2"
             transform="translate(48.55 146.78)">Rust</text>
           <rect class="cls-1" x="1.5" y="197.5" width="144" height="78" rx="3" /><text class="cls-2"
-            transform="translate(34.49 232.76)">Native 
-            <tspan x="-4.85" y="24">Apps ...</tspan></text>
+            transform="translate(34.49 232.76)">Native
+            <tspan x="-4.85" y="24">Apps ...</tspan>
+          </text>
           <rect class="cls-1" x="193.5" y="1.5" width="258" height="78" rx="3" />
           <rect class="cls-1" x="193.5" y="99.5" width="258" height="176" rx="3" />
           <rect class="cls-1" x="504.5" y="1.5" width="144" height="274" rx="3" />
-          <text class="cls-2"
-            transform="translate(549.66 132.76)">Web 
-            <tspan x="-3.55" y="24">Apps</tspan></text><text class="cls-2"
-            transform="translate(270.49 37.19)">Webnized
-            <tspan x="0" y="24">Wasm/JS Libs</tspan></text><text
-            class="cls-2" transform="translate(234.59 140.49)">Webnizer Suite</text>
-            <text class="cls-3"
-            transform="translate(221.11 167.68)">One Stop UI, Libs, Tools</text>
+          <text class="cls-2" transform="translate(549.66 132.76)">Web
+            <tspan x="-3.55" y="24">Apps</tspan>
+          </text><text class="cls-2" transform="translate(270.49 37.19)">Webnized
+            <tspan x="0" y="24">Wasm/JS Libs</tspan>
+          </text><text class="cls-2" transform="translate(234.59 140.49)">Webnizer Suite</text>
+          <text class="cls-3" transform="translate(221.11 167.68)">One Stop UI, Libs, Tools</text>
           <rect class="cls-1" x="209.85" y="196" width="130.65" height="63" rx="3" />
-          <text class="cls-3"
-            transform="translate(235.04 215.68)">Package</text><text class="cls-3"
+          <text class="cls-3" transform="translate(235.04 215.68)">Package</text><text class="cls-3"
             transform="translate(235.75 247.68)">Compile</text>
           <g class="cls-4" id="chrome">
             <circle class="cls-5" cx="601.25" cy="229.25" r="37.75" />

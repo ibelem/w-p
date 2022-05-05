@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import {
-  defineComponent, toRefs, reactive, onBeforeMount
+  defineComponent, toRefs, reactive, onBeforeMount,
 } from 'vue';
 import Nav from './Nav.vue';
 import HomeHero from './HomeHero.vue';

@@ -118,15 +118,24 @@ ol {
 }
 
 .home #wrap.onScroll header {
-  position: sticky;
-  padding: 0rem 1rem;
+  position: fixed;
+  width: 100vw;
+  padding: 1rem 0rem;
   left: 0;
   top: 0;
   z-index: 1000;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  background-color: rgba(255, 255, 255, 0.9);
+  animation: fadeIn 0.5s;	
+  background-color: rgba(255, 255, 255, 0.95);
   ul li {
     color: #333;
+    text-shadow: none;
+  }
+  a {
+    margin-left: 9.5rem;
+  }
+  nav {
+    margin-right: 10.8rem;
   }
 }
 
@@ -145,11 +154,13 @@ ol {
 }
 
 .header {
-  background: none;
+  background-image: none;
 }
 
 .home .header {
-  background-image: linear-gradient(21deg, #0cd3ff 68%, #30F197 163%), linear-gradient(163deg, #30F197 86%, #e406f9 40%), linear-gradient(0deg, #e406f9 122%, #0cd3ff 169%), linear-gradient(45deg, #0cd3ff 64%, #30F197 43%);
+  margin: 0px auto;
+  overflow: hidden;
+  animation: 0.8s ease 2s 1 normal forwards running cCHcAw;
   background-blend-mode: overlay, multiply, color, normal;
   color: rgba(255, 255, 255, 1.0);
 }
@@ -159,4 +170,14 @@ ol {
   font-size: 1.1rem;
   letter-spacing: 2px;
   font-weight: 300;
+}
+
+nav ul li {
+  color: #333;
+  text-shadow: none;
+}
+
+.home nav ul li {
+  color: rgba(255, 255, 255, 1.0);
+  text-shadow: rgb(0 0 0 / 5%) 0 1px 0;
 }
