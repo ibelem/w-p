@@ -90,10 +90,9 @@ export default defineComponent({
 <style scoped lang="stylus">
 footer {
   max-width: 1280px;
-  height: 40px;
   color: #333;
   padding: 0 1rem 1rem 1rem;
-  margin: 0 auto;
+  margin: 1rem auto;
   text-align: center;
 
   div, ul, ul li {

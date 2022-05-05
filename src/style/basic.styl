@@ -102,7 +102,7 @@ ol {
 }
 
 .content {
-  height: calc(100vh - 150px);
+  height: calc(100vh - 165px);
 }
 
 .home .content {
@@ -140,7 +140,7 @@ ol {
 }
 
 #editorcontainer {
-  height: calc(100vh - 200px);
+  height: calc(100vh - 210px);
 }
 
 .decorationsOverviewRuler, .monaco-scrollable-element > .scrollbar {
@@ -151,6 +151,17 @@ ol {
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
+}
+
+.content {
+  max-width: 1280px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+#editorcontainer {
+  text-align: left;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .header {
@@ -181,3 +192,28 @@ nav ul li {
   color: rgba(255, 255, 255, 1.0);
   text-shadow: rgb(0 0 0 / 5%) 0 1px 0;
 }
+
+.logo-1, .home #wrap.onScroll .logo-1 {
+  opacity: 1.0;
+  font-size: 48px;
+  fill: #333;
+  font-family: Poppins;
+  letter-spacing: 0.01em;
+  text-shadow: none;
+}
+
+.logo-2, .home #wrap.onScroll .logo-2 {
+  fill: none;
+  stroke: #3fa9f5;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+}
+
+.home .logo-1 {
+  fill: #fff;
+}
+
+.home .logo-2 {
+  stroke: #fff;
+}
+

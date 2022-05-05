@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import {
-  defineComponent, onMounted, reactive, toRefs, watch, ref,
+  defineComponent, onMounted, reactive, toRefs, watch,
 } from 'vue';
 import { useRouter } from 'vue-router';
 import Header from './Header.vue';
