@@ -22,25 +22,20 @@ const emit = defineEmits<(e: 'update:modelValue', tab: string) => void>();
 
 <style scoped lang="stylus">
 #editortabs {
-  margin-bottom: 0px;
+  margin-bottom: -1px;
 }
 
 .tab-item {
     display: inline-block;
     padding: 4px 2rem;
     color: #333;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-bottom: 0px;
 }
 
 .tab-item-active  {
     display: inline-block;
     padding: 4px 2rem;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    background-color: #3fa9f5;
-    border-bottom: 0px;
-    color: #fff;
-    box-shadow: rgba(63, 169, 245, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
+    border-bottom: 1px solid #000;
+    color: #000;
 }
 
 #editortabs a {

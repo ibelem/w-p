@@ -217,7 +217,7 @@ export default defineComponent({
     height 44px;
     position relative;
     overflow hidden;
-    width 108px;
+    width 102px;
     display inline-block
   }
 
@@ -269,6 +269,7 @@ export default defineComponent({
     font-weight: 500;
     margin-top: 10px;
     color: #111;
+    border-radius: 3px;
     letter-spacing: 2px;
     transition: 0.2s;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
