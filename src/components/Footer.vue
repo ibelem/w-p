@@ -97,7 +97,6 @@ footer {
 
   div, ul, ul li {
     display inline-block
-    margin: 0 1rem 0 0;
   }
 }
 </style>

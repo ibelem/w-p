@@ -149,9 +149,34 @@ ol {
 .home .header {
   margin: 0px auto;
   overflow: hidden;
-  animation: 0.8s ease 2s 1 normal forwards running cCHcAw;
-  background-blend-mode: overlay, multiply, color, normal;
   color: rgba(255, 255, 255, 1.0);
+  background-blend-mode: overlay, multiply, color, normal;
+}
+
+.t {
+  animation: 0.8s ease 2s 1 normal forwards running cCHcAw;
+  animation: glow 4.1s ease-out.5s;
+  animation-fill-mode: forwards;
+  filter: blur(160px);
+  z-index: -1000;
+  background: conic-gradient(from 230.29deg at 51.63%52.16%,#2400ff 0deg,#0087ff 67.5deg,#ff1d7a 198.75deg,#f5381b 251.25deg,#ff5335 301.88deg,#691eff 360deg);
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.9;
+    -webkit-animation-timing-function: cubic-bezier(.74, .25, .76, 1);
+    animation-timing-function: cubic-bezier(.74, .25, .76, 1)
+  }
+
+  50% {
+    opacity: 0.95;
+    -webkit-animation-timing-function: cubic-bezier(.12, .01, .08, .99);
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .home h3 {

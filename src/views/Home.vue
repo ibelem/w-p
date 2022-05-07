@@ -37,9 +37,13 @@ export default defineComponent({
     const getDegree4 = () => degrees[Math.floor(Math.random() * degrees.length)];
 
     onMounted(() => {
-      document.querySelector('.home .header')?.setAttribute('style', `
-        background-image: linear-gradient(${getDegree()}deg, ${getColor()} 108%, #ffffff 100%), linear-gradient(${getDegree2()}deg, #30F197 86%, #e406f9 10%), linear-gradient(${getDegree3()}deg, #e406f9 100%, ${getColor()} 100%), linear-gradient(${getDegree4()}deg, ${getColor()} ${rInt}%, #30F197 43%);
-      `);
+      document.querySelector('.home .header')?.setAttribute('style',
+        `background-image: linear-gradient(${getDegree()}deg, ${getColor()} 108%, #ffffff 100%), 
+        linear-gradient(${getDegree2()}deg, #30F197 86%, #e406f9 10%), 
+        linear-gradient(${getDegree3()}deg, #e406f9 100%, ${getColor()} 100%), 
+        linear-gradient(${getDegree4()}deg, ${getColor()} ${rInt}%, #30F197 43%)
+        `,
+      );
     });
 
     onUnmounted(() => {
