@@ -58,7 +58,6 @@ export default defineComponent({
 
 <style scoped lang="stylus">
 header {
-  height: 60px;
   display: grid;
   grid-template-columns: 2fr 8fr;
   grid-column-gap: 0px

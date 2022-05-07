@@ -91,7 +91,7 @@ nav {
   ul li {
     color $font-color
     display inline-block
-    padding 10px 20px
+    padding 10px 0 10px 3rem
     cursor pointer
     &.active {
         background: ;
@@ -126,5 +126,19 @@ nav {
   nav {
     justify-self: center;
   }
+  nav ul li {
+    color $font-color
+    display inline-block
+    padding 10px 1rem 10px 1rem
+  }
 }
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  nav ul li {
+    color $font-color
+    display inline-block
+    padding 10px 1rem 10px 1rem
+  }
+}
+
 </style>

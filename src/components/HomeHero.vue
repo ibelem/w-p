@@ -78,7 +78,7 @@
 import { defineComponent, onMounted } from 'vue';
 
 export default defineComponent({
-  name: 'HeroView',
+  name: 'HomeHero',
   components: {},
   setup() {
     onMounted(() => {
@@ -311,6 +311,21 @@ export default defineComponent({
 
   #hero svg {
     width: 90vw;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  #wrap, .content, #hero {
+    max-width: auto;
+  }
+    #hero svg {
+    width: 44vw;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  #wrap, .content, #hero {
+    max-width: auto;
   }
 }
 </style>

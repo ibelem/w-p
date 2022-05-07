@@ -122,7 +122,7 @@
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 60px;
+  grid-column-gap: 2rem;
   grid-row-gap: 0px;
   justify-items: center;
   align-items: center;
@@ -139,7 +139,7 @@
 .card:hover {
   box-shadow: -1px 5px 10px -5px rgba(0, 0, 0, 0.2);
   z-index: 9999;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .ci {
@@ -243,7 +243,7 @@
 }
 .c1:hover .cs-c1 .ot {
   color: #fff;
-  border-right: 1px solid #BD7C2F;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .c2:hover .cs-c2 {
@@ -251,7 +251,7 @@
 }
 .c2:hover .cs-c2 .ot {
   color: #fff;
-  border-right: 1px solid rgb(90, 70, 220);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .c3:hover .cs-c3 {
@@ -259,7 +259,7 @@
 }
 .c3:hover .cs-c3 .ot {
   color: #fff;
-  border-right: 1px solid #da0060;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .cu-stats {
@@ -314,6 +314,42 @@
 
   .cu-stats .stat-value {
     font-size: 8px;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .cards {
+    grid-column-gap: 0.5rem;
+  }
+  .cu-stats .ot {
+    padding: 10px 5px;
+  }
+
+  .cu-description {
+    font-size: 12px;
+  }
+
+  .cu-stats .stat {
+    font-size: 16px;
+  }
+
+  .cu-stats .stat-value {
+    font-size: 6px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .cards {
+    grid-column-gap: 0rem;
+  }
+  .card {
+    width: 90%;
+  }
+  .cu-stats .ot {
+    padding: 20px 10px;
+  }
+  .cu-stats .stat {
+    font-size: 20px;
   }
 }
 

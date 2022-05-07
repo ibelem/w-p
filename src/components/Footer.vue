@@ -33,26 +33,26 @@ export default defineComponent({
 
     const reactiveData = reactive({
       navList: [
-        {
-          name: 'Home',
-          isActive: false,
-          path: '/',
-        },
-        {
-          name: 'Vuex',
-          isActive: false,
-          path: '/vuex',
-        },
-        {
-          name: 'Axios',
-          isActive: false,
-          path: '/axios',
-        },
-        {
-          name: 'Test',
-          isActive: false,
-          path: '/test',
-        },
+        // {
+        //   name: 'Home',
+        //   isActive: false,
+        //   path: '/',
+        // },
+        // {
+        //   name: 'Vuex',
+        //   isActive: false,
+        //   path: '/vuex',
+        // },
+        // {
+        //   name: 'Axios',
+        //   isActive: false,
+        //   path: '/axios',
+        // },
+        // {
+        //   name: 'Test',
+        //   isActive: false,
+        //   path: '/test',
+        // },
       ],
 
       navClick(e: NavItem) {

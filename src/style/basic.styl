@@ -101,9 +101,11 @@ ol {
   align-items center
 }
 
+/* 
 .content {
   height: calc(100vh - 165px);
 }
+*/
 
 .home .content {
   height: auto;
@@ -115,32 +117,6 @@ ol {
 
 .home #hero {
   display: grid;
-}
-
-.home #wrap.onScroll header {
-  position: fixed;
-  width: 100vw;
-  padding: 1rem 0rem;
-  left: 0;
-  top: 0;
-  z-index: 1000;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  animation: fadeIn 0.5s;	
-  background-color: rgba(255, 255, 255, 0.95);
-  ul li {
-    color: #333;
-    text-shadow: none;
-  }
-  a {
-    margin-left: 9.5rem;
-  }
-  nav {
-    margin-right: 10.8rem;
-  }
-}
-
-#editorcontainer {
-  height: calc(100vh - 210px);
 }
 
 .decorationsOverviewRuler, .monaco-scrollable-element > .scrollbar {
@@ -162,6 +138,8 @@ ol {
 #editorcontainer {
   text-align: left;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  height: calc(100vh - 196px);
+  margin: 0 3rem;
 }
 
 .header {
@@ -221,15 +199,7 @@ nav ul li {
   #wrap {
     max-width: 640px;
   }
-
-  .home #wrap.onScroll header {
-    width: auto;
-    padding: 2rem 1rem 1rem 1rem;
-    position: sticky;
-    top: 0;
-    left: 0;
-  }
-
+ 
   .home #wrap.onScroll header a {
     margin-left: 0;
   }
@@ -241,15 +211,108 @@ nav ul li {
   nav {
     justify-self: center;
   }
-}
 
-@media screen and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
-  body {
-    background-color: yellow;
+  #editorcontainer {
+    margin: 0px 1rem;
   }
 }
-@media screen and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
-  body {
-    background-color: blue;
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .home #wrap.onScroll header {
+    position: fixed;
+    width: 100vw;
+    padding: 1rem 0rem;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: fadeIn 0.5s;	
+    background-color: rgba(255, 255, 255, 0.95);
+    ul li {
+      color: #333;
+      text-shadow: none;
+    }
+    a {
+      margin-left: 9.5rem;
+    }
+    nav {
+      margin-right: 10.8rem;
+    }
+  }
+
+  #wrap, .content {
+    max-width: 1024px;
+  }
+  
+  header {
+    padding: 1rem;
+  }
+
+  .home #wrap.onScroll header {
+    width: auto;
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .home #wrap.onScroll header a {
+    margin-left: 0;
+    padding-top: 8px;
+  }
+
+  .home #wrap.onScroll header nav {
+    margin-right: 0;
+  }
+
+  nav {
+    justify-self: right;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .home #wrap.onScroll header {
+    position: fixed;
+    width: 100vw;
+    padding: 1rem 0rem;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: fadeIn 0.5s;	
+    background-color: rgba(255, 255, 255, 0.95);
+    ul li {
+      color: #333;
+      text-shadow: none;
+    }
+    a {
+      margin-left: 9.5rem;
+    }
+    nav {
+      margin-right: 10.8rem;
+    }
+  }
+
+  #wrap, .content {
+    max-width: auto;
+  }
+
+  .home #wrap.onScroll header {
+    width: auto;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .home #wrap.onScroll header a {
+    margin-left: 0;
+    padding-top: 8px;
+  }
+
+  .home #wrap.onScroll header nav {
+    margin-right: 0;
   }
 }
