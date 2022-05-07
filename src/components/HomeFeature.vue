@@ -13,23 +13,23 @@
         <div class="card_un">Conversion</div>
         <div class="cu-description">
           Converting your native applications to high quality cross-platform web applications,
-          running everywhere with Web Assembly and JavaScript.
+          running everywhere with Wasm and JavaScript.
         </div>
 
         <div class="cu-stats cs-c1 clearfix">
           <div class="ot">
-            <div class="stat">1<sup>2</sup></div>
-            <div class="stat-value">Lib A</div>
+            <div class="stat">C</div>
+            <div class="stat-value">Native</div>
           </div>
 
           <div class="ot">
-            <div class="stat">3</div>
-            <div class="stat-value">Lib B</div>
+            <div class="stat">C++</div>
+            <div class="stat-value">Native</div>
           </div>
 
           <div class="ot no-border">
-            <div class="stat">4</div>
-            <div class="stat-value">Lib C</div>
+            <div class="stat">Rust</div>
+            <div class="stat-value">Native</div>
           </div>
         </div>
       </div>
@@ -54,18 +54,18 @@
 
         <div class="cu-stats cs-c2 clearfix">
           <div class="ot">
-            <div class="stat">1<sup>2</sup></div>
-            <div class="stat-value">Lib A</div>
+            <div class="stat">OpenCV<sup>.js</sup></div>
+            <div class="stat-value">Computer Vision</div>
           </div>
 
           <div class="ot">
-            <div class="stat">3</div>
-            <div class="stat-value">Lib B</div>
+            <div class="stat" title="Threading Building Blocks">TBB</div>
+            <div class="stat-value">Performance</div>
           </div>
 
           <div class="ot no-border">
-            <div class="stat">4</div>
-            <div class="stat-value">Lib C</div>
+            <div class="stat">oneDNN</div>
+            <div class="stat-value">Deep Learning</div>
           </div>
         </div>
 
@@ -88,18 +88,18 @@
 
         <div class="cu-stats cs-c3 clearfix">
           <div class="ot">
-            <div class="stat">1<sup>2</sup></div>
-            <div class="stat-value">Lib A</div>
+            <div class="stat">Compiler</div>
+            <div class="stat-value">Suite</div>
           </div>
 
           <div class="ot">
-            <div class="stat">3</div>
-            <div class="stat-value">Lib B</div>
+            <div class="stat">Tools</div>
+            <div class="stat-value">Suite</div>
           </div>
 
           <div class="ot no-border">
-            <div class="stat">4</div>
-            <div class="stat-value">Lib C</div>
+            <div class="stat">Package</div>
+            <div class="stat-value">Suite</div>
           </div>
         </div>
 
@@ -114,7 +114,7 @@
 <style scoped lang="stylus">
 #feature {
   text-align center
-  margin 2rem auto
+  margin 2.5rem auto
   color: #333;
 }
 
@@ -122,28 +122,24 @@
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
   grid-column-gap: 60px;
   grid-row-gap: 0px;
-  justify-items: stretch;
+  justify-items: center;
   align-items: center;
 }
 
 .card {
-  display: inline-block;
   margin: auto;
   border-radius: 5px;
-  position: relative;
-  text-align: center;
   box-shadow: -1px 5px 10px -5px rgba(0, 0, 0, 0.05);
   z-index: 9999;
-  border: 1px solid rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
-  box-shadow: -1px 5px 10px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: -1px 5px 10px -5px rgba(0, 0, 0, 0.2);
   z-index: 9999;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .ci {
@@ -156,14 +152,22 @@
 .ci svg {
   height: 60px;
   width: 60px;
-  padding-top: 2rem;
+  padding-top: 2.5rem;
+}
+
+.c2 {
+  margin: 0px auto;
+  text-align: center;
 }
 
 .ci-c2 {
   height: 94px;
+  width: 94px;
   overflow: hidden;
+  display: inline-block;
 }
 .ci-c2 svg {
+  display: inline-block;
   height: 60px;
   width: 60px;
 }
@@ -204,7 +208,10 @@
 
 .cu-description {
   padding: 20px;
-  margin-bottom: 10px;
+  height: 62.4px;
+  overflow hidden;
+  text-overflow: ellipsis;
+  text-align: left;
 }
 
 .cs-c1 {
@@ -284,10 +291,30 @@
 .cu-stats .stat-value {
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 10px;
 }
 .cu-stats .no-border {
   border-right: none;
+}
+
+@media only screen and (max-width: 640px) {
+  .cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+  }
+  .card {
+    width: 90vw;
+  }
+
+  .cu-stats .stat {
+    font-size: 18px;
+  }
+
+  .cu-stats .stat-value {
+    font-size: 8px;
+  }
 }
 
 </style>

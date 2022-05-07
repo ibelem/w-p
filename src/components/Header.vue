@@ -76,4 +76,13 @@ header {
     width: 220px;
   }
 }
+
+@media only screen and (max-width: 640px) {
+  header {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 2rem 1rem 0rem 1rem;
+    height: auto;
+  }
+}
 </style>

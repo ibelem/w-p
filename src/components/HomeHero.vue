@@ -208,13 +208,13 @@ export default defineComponent({
   }
 
   h2 {
-    font-size 46px
+    font-size 45px
     line-height 1.06
     color #fff
   }
 
   .mask {
-    height 44px;
+    height 47px;
     position relative;
     overflow hidden;
     width 102px;
@@ -248,7 +248,7 @@ export default defineComponent({
   }
 
   .mask span:nth-child(2) {
-    background-image linear-gradient(45deg, #30F197 10%, #fff 90%);
+    background-image linear-gradient(45deg, #EC9B3B 10%, #fff 90%);
   }
 
   .mask span:nth-child(3) {
@@ -278,9 +278,39 @@ export default defineComponent({
   a:hover
   {
     color: #fff;
-    letter-spacing: 6px;
+    letter-spacing: 3px;
     background linear-gradient(135deg, #0cd3ff 25%, #30F197 25%, #e406f9 25%)
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 1s;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #hero {
+    max-width: 640px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0px;
+  }
+
+  #hero .description {
+    padding: 0;
+  }
+
+  #hero h2 {
+    font-size: 40px;
+  }
+
+  #hero .mask {
+    height: 40px;
+  }
+
+  #hero .mask span {
+    top: 46px;
+  }
+
+  #hero svg {
+    width: 90vw;
   }
 }
 </style>

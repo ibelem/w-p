@@ -204,7 +204,7 @@ nav ul li {
 
 .logo-2, .home #wrap.onScroll .logo-2 {
   fill: none;
-  stroke: #3fa9f5;
+  stroke: rgba(12, 211, 255, 1.0);
   stroke-miterlimit: 10;
   stroke-width: 3px;
 }
@@ -217,3 +217,39 @@ nav ul li {
   stroke: #fff;
 }
 
+@media only screen and (max-width: 640px) {
+  #wrap {
+    max-width: 640px;
+  }
+
+  .home #wrap.onScroll header {
+    width: auto;
+    padding: 2rem 1rem 1rem 1rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+  .home #wrap.onScroll header a {
+    margin-left: 0;
+  }
+
+  .home #wrap.onScroll header nav {
+    margin-right: 0;
+  }
+
+  nav {
+    justify-self: center;
+  }
+}
+
+@media screen and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+  body {
+    background-color: yellow;
+  }
+}
+@media screen and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+  body {
+    background-color: blue;
+  }
+}
