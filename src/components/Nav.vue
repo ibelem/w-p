@@ -10,6 +10,7 @@
         {{ nav.name }}
       </li>
     </ul>
+    <i class="bx bx-menu mobile-nav-toggle"></i>
   </nav>
 </template>
 
@@ -31,7 +32,7 @@ export default defineComponent({
         {
           name: 'Get Started',
           isActive: false,
-          path: '/',
+          path: '/getstarted',
         },
         {
           name: 'Libs',
@@ -120,6 +121,10 @@ nav {
     color: #ffffff;
     transform: scale(1);
   }
+
+  .mobile-nav-toggle {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -141,4 +146,9 @@ nav {
   }
 }
 
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+}
 </style>

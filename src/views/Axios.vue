@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pageview">
     <button type="button" @click="getUserInfo">ibelem</button>
     <div class="info-list-box" v-if="userInfo">
       <div class="text item">{{ userInfo }}</div>

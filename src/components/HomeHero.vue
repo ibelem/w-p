@@ -16,7 +16,7 @@
     <div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 277">
         <defs></defs>
-        <title>flowchart</title>
+        <title></title>
         <g id="Layer_2" data-name="Layer 2">
           <rect class="cls-1" x="1.5" y="1.5" width="144" height="78" rx="3" /><text class="cls-2"
             transform="translate(31.16 48.78)">C/C++</text>
@@ -196,7 +196,7 @@ export default defineComponent({
   grid-row-gap 0px
   justify-items center
   align-items center
-  text-shadow: rgba(0, 0, 0, 0.05) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px;
 
   .description{
     padding 1rem 2rem
@@ -273,6 +273,7 @@ export default defineComponent({
     letter-spacing: 2px;
     transition: 0.2s;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    text-shadow: rgba(0, 0, 0, 0) 1px 1px 1px;
   }
 
   a:hover
@@ -303,6 +304,7 @@ export default defineComponent({
 
   #hero .mask {
     height: 40px;
+    width: 92px;
   }
 
   #hero .mask span {

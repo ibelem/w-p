@@ -1,7 +1,7 @@
 <template>
   <footer>
-    <div>
-      <div>&copy;2022 Webnizer</div>
+    <div class="footer">
+      <!-- <div>&copy;2022 Webnizer</div> -->
       <ul>
         <li
           v-for="(nav, index) in navList"
@@ -33,11 +33,21 @@ export default defineComponent({
 
     const reactiveData = reactive({
       navList: [
-        // {
-        //   name: 'Home',
-        //   isActive: false,
-        //   path: '/',
-        // },
+        {
+          name: '©2022 Webnizer',
+          isActive: false,
+          path: '/',
+        },
+        {
+          name: 'Docs',
+          isActive: false,
+          path: '/docs',
+        },
+        {
+          name: 'About',
+          isActive: false,
+          path: '/about',
+        },
         // {
         //   name: 'Vuex',
         //   isActive: false,
@@ -89,14 +99,65 @@ export default defineComponent({
 </script>
 <style scoped lang="stylus">
 footer {
-  max-width: 1280px;
   color: #333;
-  padding: 0 1rem 1rem 1rem;
-  margin: 1rem auto;
-  text-align: center;
+  padding: 3rem 1rem 3rem 1rem;
+  margin: 3rem 0 0 0;
+  background: #f1f1f1;
 
-  div, ul, ul li {
-    display inline-block
+  .footer {
+    max-width: 1280px;
+    margin: 0px auto;
+    text-align: left;
+  }
+
+  @media only screen and (max-width: 640px) {
+    .footer {
+      max-width: 640px;
+    }
+  }
+
+  @media screen and (min-width: 641px) and (max-width: 1024px) {
+    .footer {
+      max-width: 1024px;
+    }
+  }
+
+  .footer div {
+    display: inline-block;
+  }
+
+  ul {
+    margin-left: 1rem;
+  }
+
+  ul, ul li {
+    display: inline-block;
+  }
+
+  ul li {
+    margin: 0 2rem 0 0;
+  }
+
+  ul li:hover {
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  footer {
+    padding: 3rem 1rem 3rem 0rem;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  footer {
+    padding: 3rem 1rem 3rem 0rem;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  footer {
+    padding: 3rem 1rem 3rem 0rem;
   }
 }
 </style>

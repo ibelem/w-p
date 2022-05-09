@@ -2,10 +2,13 @@ import {
   createRouter, createWebHashHistory, Router, RouteRecordRaw,
 } from 'vue-router';
 import Home from '@/views/Home.vue';
+import GetStarted from '@/views/GetStarted.vue';
+import Libs from '@/views/Libs.vue';
+import Editor from '@/views/Editor.vue';
+import Docs from '@/views/Docs.vue';
+import About from '@/views/About.vue';
 import Vuex from '@/views/Vuex.vue';
 import Test from '@/views/Test.vue';
-import Editor from '@/views/Editor.vue';
-import Libs from '@/views/Libs.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -14,9 +17,29 @@ const routes: Array<RouteRecordRaw> = [
     component: Home,
   },
   {
+    path: '/getstarted',
+    name: 'GetStarted',
+    component: GetStarted,
+  },
+  {
     path: '/libs',
     name: 'Libs',
     component: Libs,
+  },
+  {
+    path: '/editor',
+    name: 'Editor',
+    component: Editor,
+  },
+  {
+    path: '/docs',
+    name: 'Docs',
+    component: Docs,
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About,
   },
   {
     path: '/vuex',
@@ -32,11 +55,6 @@ const routes: Array<RouteRecordRaw> = [
     path: '/test',
     name: 'Test',
     component: Test,
-  },
-  {
-    path: '/editor',
-    name: 'Editor',
-    component: Editor,
   },
 ];
 

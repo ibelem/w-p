@@ -114,12 +114,12 @@
 <style scoped lang="stylus">
 #feature {
   text-align center
-  margin 2.5rem auto
+  margin 3rem 1rem
   color: #333;
 }
 
 .cards {
-  margin-top: 2rem;
+  margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 2rem;
@@ -132,14 +132,12 @@
   margin: auto;
   border-radius: 5px;
   box-shadow: -1px 5px 10px -5px rgba(0, 0, 0, 0.05);
-  z-index: 9999;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .card:hover {
-  box-shadow: -1px 5px 10px -5px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.2s ease;
 }
 
 .ci {
@@ -208,7 +206,8 @@
 
 .cu-description {
   padding: 20px;
-  height: 62.4px;
+  height: 62px;
+  max-height: 62px;
   overflow hidden;
   text-overflow: ellipsis;
   text-align: left;
@@ -241,6 +240,7 @@
 .c1:hover .cs-c1 {
   background: #EC9B3B;
 }
+
 .c1:hover .cs-c1 .ot {
   color: #fff;
   border-right: 1px solid rgba(0, 0, 0, 0.2);
@@ -260,6 +260,12 @@
 .c3:hover .cs-c3 .ot {
   color: #fff;
   border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.c1:hover .cs-c1 .ot:last-child,
+.c2:hover .cs-c2 .ot:last-child,
+.c3:hover .cs-c3 .ot:last-child {
+  border-right: 0px;
 }
 
 .cu-stats {

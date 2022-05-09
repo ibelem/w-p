@@ -181,9 +181,10 @@ ol {
 
 .home h3 {
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 1rem;
   letter-spacing: 2px;
   font-weight: 500;
+  height: 1rem;
 }
 
 nav ul li {
@@ -193,7 +194,7 @@ nav ul li {
 
 .home nav ul li {
   color: rgba(255, 255, 255, 1.0);
-  text-shadow: rgb(0 0 0 / 5%) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px;
 }
 
 .logo-1, .home #wrap.onScroll .logo-1 {
@@ -218,6 +219,10 @@ nav ul li {
 
 .home .logo-2 {
   stroke: #fff;
+}
+
+.pageview {
+  margin: 3rem 0 4rem 0;
 }
 
 @media only screen and (max-width: 640px) {
@@ -279,7 +284,7 @@ nav ul li {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 10000;
   }
 
   .home #wrap.onScroll header a {
@@ -303,7 +308,6 @@ nav ul li {
     padding: 1rem 0rem;
     left: 0;
     top: 0;
-    z-index: 1000;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     animation: fadeIn 0.5s;	
     background-color: rgba(255, 255, 255, 0.95);
@@ -329,7 +333,6 @@ nav ul li {
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 1000;
   }
   
   .home #wrap.onScroll header a {
