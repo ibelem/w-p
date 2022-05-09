@@ -114,7 +114,7 @@ nav {
   }
 
   li:hover {
-    color: #000;
+    color: #333;
   }
 
   li:hover:before {

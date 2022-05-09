@@ -35,7 +35,7 @@ const emit = defineEmits<(e: 'update:modelValue', tab: string) => void>();
     display: inline-block;
     padding: 4px 2rem;
     border-bottom: 1px solid rgba(12, 211, 255, 1.0);
-    color: #000;
+    color: #333;
 }
 
 #editortabs a {

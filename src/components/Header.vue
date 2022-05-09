@@ -77,6 +77,7 @@ header {
   }
   .logo svg, .logo svg text {
     text-decoration: none;
+    -webkit-font-smoothing: subpixel-antialiased;
   }
 }
 

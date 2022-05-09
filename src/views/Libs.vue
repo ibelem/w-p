@@ -1,7 +1,8 @@
 <template>
   <div id="lib" class="">
     <section class="rh">
-      <h2>Find public Web Assembly libraries for your Web applications.</h2>
+      <h2>Find public Webnized Web Assembly (Wasm)
+        and JavaScript libraries for your Web applications.</h2>
     </section>
     <div class="fsw">
       <section class="fs">
@@ -10,7 +11,7 @@
           <h5 class="ft">Category</h5>
           <div class="fi">
             <div class="checkbox">
-              <input id="checkbox-1" type="checkbox" />
+              <input id="checkbox-1" type="checkbox" checked="checked" />
               <label for="checkbox-1">Game<span class="box"></span>
               </label>
             </div><span class="badge sp">10</span>
@@ -26,7 +27,7 @@
           <h5 class="ft">File Size</h5>
           <div class="fi">
             <div class="checkbox">
-              <input id="checkbox-5" type="checkbox" />
+              <input id="checkbox-5" type="checkbox" checked="checked" />
               <label for="checkbox-5">&lt; 1MB<span class="box"></span></label>
             </div><span class="badge sp">9</span>
           </div>
@@ -39,166 +40,127 @@
         </div>
       </section>
     </div>
+
     <section class="rs rg">
-      <div class="profile">
- <!-- <div class="profile__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/dog.png"
-            alt="Doggo" /></div> -->
-        <div class="profile__info">
-          <h3>Wasm</h3>
-          <p class="pie">Write and run Python code in HTML, call Javascript libraries in PyScript, and do all your web development in Python.</p>
+      <div class="profile" v-for="(lib, index) in LibsList" :key="index">
+        <div class="pi">
+          <div class="pti">
+            <h3>{{ lib.title }}</h3>
+            <div v-if="lib.img.length > 0"><img v-bind:src="lib.img" /></div>
+          </div>
+          <p class="desc">{{ lib.desc }}</p>
         </div>
-        <div class="ps">
-          <p class="pst">Type</p>
-          <h5 class="psi">Wasm2</h5>
+        <div class="psg">
+          <div class="ps">
+            <p class="pst">Size</p>
+            <p class="psi">{{ lib.size }} <span class="sizeunit">{{ lib.sizeunit }}</span></p>
+          </div>
+          <div class="ps">
+            <p class="pst">Cate</p>
+            <p class="psi">{{ lib.category }}</p>
+          </div>
+          <div class="ps">
+            <p class="pst">Update</p>
+            <p class="psi">{{ lib.lastupdate }}</p>
+          </div>
         </div>
-        <div class="ps">
-          <p class="pst">Size</p>
-          <h5>Medium</h5>
+        <div class="pc">
+          <a class="button" v-if="lib.iswebnizer" v-bind:href="lib.url">Download Now</a>
+          <a class="button external" v-if="!lib.iswebnizer" v-bind:href="lib.url">View More</a>
         </div>
-        <div class="ps">
-          <p class="pst">Weight</p>
-          <h5 class="psi">45 lbs</h5>
-        </div>
-        <div class="pc"><a class="button">Download Now</a></div>
-      </div>
-      <div class="profile">
- <!-- <div class="profile__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/dog.png"
-            alt="Doggo" /></div> -->
-        <div class="profile__info">
-          <h3>Wasm</h3>
-          <p class="pie">Write and run Python code in HTML, call Javascript libraries in PyScript, and do all your web development in Python.</p>
-        </div>
-        <div class="ps">
-          <p class="pst">Type</p>
-          <h5 class="psi">Wasm2</h5>
-        </div>
-        <div class="ps">
-          <p class="pst">Size</p>
-          <h5>Medium</h5>
-        </div>
-        <div class="ps">
-          <p class="pst">Weight</p>
-          <h5 class="psi">45 lbs</h5>
-        </div>
-        <div class="pc"><a class="button">Download Now</a></div>
-      </div>
-      <div class="profile">
- <!-- <div class="profile__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/dog.png"
-            alt="Doggo" /></div> -->
-        <div class="profile__info">
-          <h3>Wasm</h3>
-          <p class="pie">Write and run Python code in HTML, call Javascript libraries in PyScript, and do all your web development in Python.</p>
-        </div>
-        <div class="ps">
-          <p class="pst">Type</p>
-          <h5 class="psi">Wasm2</h5>
-        </div>
-        <div class="ps">
-          <p class="pst">Size</p>
-          <h5>Medium</h5>
-        </div>
-        <div class="ps">
-          <p class="pst">Weight</p>
-          <h5 class="psi">45 lbs</h5>
-        </div>
-        <div class="pc"><a class="button">Download Now</a></div>
-      </div>
-      <div class="profile">
- <!-- <div class="profile__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/dog.png"
-            alt="Doggo" /></div> -->
-        <div class="profile__info">
-          <h3>Wasm</h3>
-          <p class="pie">Write and run Python code in HTML, call Javascript libraries in PyScript, and do all your web development in Python.</p>
-        </div>
-        <div class="ps">
-          <p class="pst">Type</p>
-          <h5 class="psi">Wasm2</h5>
-        </div>
-        <div class="ps">
-          <p class="pst">Size</p>
-          <h5>Medium</h5>
-        </div>
-        <div class="ps">
-          <p class="pst">Weight</p>
-          <h5 class="psi">45 lbs</h5>
-        </div>
-        <div class="pc"><a class="button">Download Now</a></div>
-      </div>
-      <div class="profile">
- <!-- <div class="profile__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/dog.png"
-            alt="Doggo" /></div> -->
-        <div class="profile__info">
-          <h3>Wasm</h3>
-          <p class="pie">Write and run Python code in HTML, call Javascript libraries in PyScript, and do all your web development in Python.</p>
-        </div>
-        <div class="ps">
-          <p class="pst">Type</p>
-          <h5 class="psi">Wasm2</h5>
-        </div>
-        <div class="ps">
-          <p class="pst">Size</p>
-          <h5>Medium</h5>
-        </div>
-        <div class="ps">
-          <p class="pst">Weight</p>
-          <h5 class="psi">45 lbs</h5>
-        </div>
-        <div class="pc"><a class="button">Download Now</a></div>
-      </div>
-      <div class="profile">
- <!-- <div class="profile__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/dog.png"
-            alt="Doggo" /></div> -->
-        <div class="profile__info">
-          <h3>Wasm</h3>
-          <p class="pie">Write and run Python code in HTML, call Javascript libraries in PyScript, and do all your web development in Python.</p>
-        </div>
-        <div class="ps">
-          <p class="pst">Type</p>
-          <h5 class="psi">Wasm2</h5>
-        </div>
-        <div class="ps">
-          <p class="pst">Size</p>
-          <h5>Medium</h5>
-        </div>
-        <div class="ps">
-          <p class="pst">Weight</p>
-          <h5 class="psi">45 lbs</h5>
-        </div>
-        <div class="pc"><a class="button">Download Now</a></div>
-      </div>
-      <div class="profile">
- <!-- <div class="profile__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/dog.png"
-            alt="Doggo" /></div> -->
-        <div class="profile__info">
-          <h3>Wasm</h3>
-          <p class="pie">Write and run Python code in HTML, call Javascript libraries in PyScript, and do all your web development in Python.</p>
-        </div>
-        <div class="ps">
-          <p class="pst">Type</p>
-          <h5 class="psi">Wasm2</h5>
-        </div>
-        <div class="ps">
-          <p class="pst">Size</p>
-          <h5>Medium</h5>
-        </div>
-        <div class="ps">
-          <p class="pst">Weight</p>
-          <h5 class="psi">45 lbs</h5>
-        </div>
-        <div class="pc"><a class="button">Download Now</a></div>
       </div>
     </section>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import {
+  defineComponent, reactive, toRefs, onMounted, watch,
+} from 'vue';
+import { LibsItem } from '../common/types';
 
 export default defineComponent({
   name: 'LibsView',
-  // components: {
-  //   Calendar,
-  // },
+
+  setup() {
+    const reactiveData = reactive({
+      LibsList: [
+        {
+          iswebnizer: true,
+          title: 'oneDNN',
+          desc: 'An open-source cross-platform performance library of basic building blocks for deep learning applications.',
+          size: 20,
+          sizeunit: 'MB',
+          img: 'https://camo.githubusercontent.com/71fa9fb2bca172083b4cd121b8d0b330fe74e34c36a29dbb71802b2070e9873a/68747470733a2f2f737065632e6f6e656170692e696f2f6f6e656170692d6c6f676f2d77686974652d7363616c65642e6a7067',
+          url: 'https://www.intel.com/content/www/us/en/developer/tools/oneapi/onednn.html',
+          category: 'Algorithm',
+          lastupdate: '22-05-09',
+        },
+        {
+          iswebnizer: false,
+          title: 'FFMPEG',
+          desc: 'A pure WebAssembly / JavaScript port of FFmpeg. It enables video & audio record, convert and stream right inside browsers.',
+          size: 2,
+          sizeunit: 'MB',
+          img: 'https://ffmpegwasm.netlify.app/static/media/logo.cb80e6cf.svg',
+          url: 'https://ffmpegwasm.netlify.app/',
+          category: 'Media',
+          lastupdate: '22-05-09',
+        },
+        {
+          iswebnizer: false,
+          title: 'PyScript',
+          desc: 'Run Python code in HTML, call Javascript libraries in PyScript, and do all your web development in Python.',
+          size: 12,
+          sizeunit: 'MB',
+          img: 'https://pyscript.net/assets/images/pyscript-sticker-black.svg',
+          url: 'http://pyscript.net/',
+          category: 'Productivity',
+          lastupdate: '22-05-09',
+        },
+        {
+          iswebnizer: false,
+          title: 'OpenCV.js',
+          desc: 'An open-source BSD-licensed library that includes several hundreds of computer vision algorithms.',
+          size: 2,
+          sizeunit: 'MB',
+          img: 'https://docs.opencv.org/4.5.5/opencv-logo-small.png',
+          url: 'https://docs.opencv.org/4.5.5/d1/dfb/intro.html',
+          category: 'Algorithm',
+          lastupdate: '22-05-09',
+        },
+      ],
+
+      // navClick(e: LibsItem) {
+      //   router.push(e.path);
+      // },
+    });
+
+    // const changeNavActive = (currentPath: string) => {
+    //   reactiveData.navList.forEach((v: LibsItem) => {
+    //     const temp = v;
+    //     temp.isActive = temp.path === currentPath;
+    //     return temp;
+    //   });
+    // };
+
+    // watch(
+    //   () => router.currentRoute.value,
+    //   (_n) => {
+    //     changeNavActive(_n.path);
+    //   },
+    // );
+
+    onMounted(() => {
+      // router.isReady().then(() => {
+      //   changeNavActive(router.currentRoute.value.path);
+      // });
+    });
+
+    return {
+      ...toRefs(reactiveData),
+    };
+  },
 });
 </script>
 
@@ -245,10 +207,39 @@ export default defineComponent({
   position: relative;
 }
 
-h2 {
-  font-size: 20px;
-  margin-bottom: 0px;
+.rh h2 {
+  font-size: 16px;
+  margin-bottom: 3rem;
   color: #333;
+}
+
+.pi h3 {
+  font-size: 26px;
+  color: #333;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.pti {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0px
+  justify-items: center;
+}
+
+.pti h3 {
+  justify-self: flex-start;
+  align-self: center;
+}
+
+.pti div {
+  justify-self: flex-end;
+  align-self: center;
+}
+
+.pti div img {
+  max-height: 26px;
+  height: 26px;
 }
 
 /*checkboxes*/
@@ -338,6 +329,15 @@ input:disabled ~ * {
   margin-right: 20px;
 }
 
+.sizeunit {
+  font-size: 0.8rem;
+}
+
+.desc {
+  height: 82px;
+  overflow: hidden;
+}
+
 a.button,
 input.button,
 button {
@@ -354,6 +354,7 @@ button {
   position: relative;
   top: 0;
   transition: 0.2s ease;
+  text-decoration: none;
 }
 a.button:hover, a.button.hover,
 input.button:hover,
@@ -361,8 +362,8 @@ input.button.hover,
 button:hover,
 button.hover {
   color: #fff;
-  letter-spacing: 3px;
-  background: linear-gradient(135deg, #0cd3ff 25%, #30F197 25%, #e406f9 25%)
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #0cd3ff 25%, #30F197 25%, #e406f9 25%);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: 1s;
 }
@@ -371,11 +372,20 @@ input.button:active,
 input.button.active,
 button:active,
 button.active {
-  background: var(--primaryShade4);
+  background: linear-gradient(135deg, #0cd3ff 25%, #30F197 25%, #e406f9 25%);
   outline: none;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   top: 0;
 }
+
+a.external {
+  background: #e406f9;
+}
+
+a.external:hover {
+  background: linear-gradient(135deg, #0cd3ff 25%, #30F197 25%, #e406f9 25%);
+}
+
 a.button.disabled,
 input.button.disabled,
 button.disabled {
@@ -424,7 +434,7 @@ button.small {
 
 .rs {
   display: grid;
-  grid-gap: 35px;
+  grid-gap: 1rem;
 }
 
 .rg {
@@ -447,39 +457,47 @@ button.small {
   box-shadow: 0 3px 15px rgba(51, 51, 51, 0.2);
 }
 
-.profile__image img {
+.pimg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-bottom: 7px solid var(--secondaryColor);
 }
-.profile__info {
+.pi {
   padding: 20px 25px 0;
 }
-.ps {
-  padding: 5px 25px;
+
+.psg {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 0px
+  justify-items: center;
 }
+
 .pst {
   color: var(--grayColor);
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 12px;
+  margin-bottom: -1rem;
 }
+
+.ps {
+  text-align: center;
+}
+
+.psi {
+  height: 1rem;
+  font-size: 1.1rem;
+  margin: 1rem 0 2rem 0;
+}
+
 .pc {
-  padding: 0 25px 25px;
-}
-.profile a:hover {
-  top: 0;
-  box-shadow: none;
-  background: var(--primaryShade4);
-}
-.profile a:active, .profile a:focus {
-  top: 0;
-  box-shadow: none;
-  background: var(--primaryShade5);
+  padding: 15px 25px 35px 25px;
+  justify-self: center;
 }
 
 .fs {
-  margin: 2em 0;
+  margin: 0;
 }
 
 .fs h3 {
@@ -528,23 +546,14 @@ button.small {
 }
 @media (min-width: 500px) {
   .rs.rg .profile {
-    width: 100%;
     margin: auto;
     overflow: hidden;
-    grid: 340px auto auto;
-    grid-gap: 10px;
   }
-  .rs.rg .profile__image {
-    grid-column: span 3;
+  .rh h2 {
+    margin-bottom: 1rem;
   }
-  .rs.rg .profile__info {
-    grid-column: span 3;
-  }
-  .rs.rg .ps {
-    padding: 5px 25px;
-  }
-  .rs.rg .pc {
-    grid-column: span 3;
+  .fs {
+    margin: 0 0 2rem 0;
   }
 }
 
@@ -552,7 +561,6 @@ button.small {
   #lib {
     display: grid;
     grid: min-content auto 1fr;
-    grid-gap: 40px;
   }
 
   .fsw {
@@ -561,7 +569,6 @@ button.small {
 
   .fs {
     position: sticky;
-    top: 30px;
   }
 
   .rs {
@@ -572,6 +579,12 @@ button.small {
 @media only screen and (max-width: 640px) {
   #lib {
     padding: 0 1rem;
+  }
+  .rh h2 {
+    margin-bottom: 1rem;
+  }
+  .fs {
+    margin: 0 0 2rem 0;
   }
 }
 </style>
