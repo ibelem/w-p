@@ -102,7 +102,7 @@ export default defineComponent({
           desc: 'A pure WebAssembly / JavaScript port of FFmpeg. It enables video & audio record, convert and stream right inside browsers.',
           size: 2,
           sizeunit: 'MB',
-          img: 'https://ffmpegwasm.netlify.app/static/media/logo.cb80e6cf.svg',
+          img: 'https://ffmpegwasm.netlify.app/static/media/logo.cb80e6cfbae8f515fd4b95933b7f5a83.svg',
           url: 'https://ffmpegwasm.netlify.app/',
           category: 'Media',
           lastupdate: '22-05-09',
