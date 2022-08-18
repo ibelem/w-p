@@ -252,7 +252,7 @@ export default defineComponent({
     border: 3px solid rgba(255, 255, 255, 1);
     letter-spacing: 3px;
     background linear-gradient(135deg, rgba(35, 100, 210, 0.6) 25%, rgba(255, 59, 89, 0.6) 25%);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(35, 100, 210, 1) 3px 5px 10px 0px;
     transition: 1s;
   }
 }
