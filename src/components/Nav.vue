@@ -104,7 +104,7 @@ nav {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: rgba(0, 199, 253, 0.8);
+    background-color: rgba(35, 100, 210, 0.8);
     position: relative;
     left: 0;
     bottom: -1.6rem;

@@ -184,7 +184,7 @@
 }
 
 .c2:hover #wasm {
-  fill: #0cd3ff;
+  fill: rgba(35, 100, 210, 1);
 }
 
 .c3:hover svg {
@@ -248,7 +248,7 @@
 }
 
 .c2:hover .cs-c2 {
-  background: #0cd3ff;
+  background: rgba(35, 100, 210, 1);
 }
 .c2:hover .cs-c2 .ot {
   color: #fff;

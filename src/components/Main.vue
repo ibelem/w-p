@@ -65,4 +65,7 @@ export default defineComponent({
     margin: 0 auto;
     text-align: center;
   }
+  .home .header {
+    height: 100vh;
+  }
 </style>

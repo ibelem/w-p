@@ -185,12 +185,12 @@ export default defineComponent({
   --boxShadow: 0 2px 5px rgba(#333, 0.2);
   --backgroundColor: #fff;
   --foregroundColor: #111;
-  --primaryColor: #00c7fd;
+  --primaryColor: rgba(35, 100, 210, 1);
   --primaryShade1: #e1f5fe;
   --primaryShade2: #b3e5fc;
-  --primaryShade3: #00c7fd;
+  --primaryShade3: rgba(35, 100, 210, 1);
   --primaryShade4: #03a9f4;
-  --primaryShade5: #0277bd;
+  --primaryShade5: rgba(35, 100, 210, 1);
   --secondaryColor: #ff3b59;
 }
 
@@ -272,11 +272,10 @@ input:disabled ~ * {
 
 .checkbox span.box {
   display: inline-block;
-  width: 20px;
   border-radius: 3px;
   border: 1px solid var(--grayColor);
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   vertical-align: middle;
   margin-right: 3px;
   transition: 0.3s ease;
@@ -363,7 +362,7 @@ button:hover,
 button.hover {
   color: #fff;
   letter-spacing: 2px;
-  background: linear-gradient(135deg, #0cd3ff 25%, #ff3b59 25%);
+  background: linear-gradient(135deg, rgba(35, 100, 210, 1) 25%, #ff3b59 25%);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: 1s;
 }
@@ -372,7 +371,7 @@ input.button:active,
 input.button.active,
 button:active,
 button.active {
-  background: linear-gradient(135deg, #0cd3ff 25%, #ff3b59 25%);
+  background: linear-gradient(135deg, rgba(35, 100, 210, 1) 25%, #ff3b59 25%);
   outline: none;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   top: 0;
@@ -383,7 +382,7 @@ a.external {
 }
 
 a.external:hover {
-  background: linear-gradient(135deg, #0cd3ff 25%, #ff3b59 25%);
+  background: linear-gradient(135deg, rgba(35, 100, 210, 1) 25%, #ff3b59 25%);
 }
 
 a.button.disabled,

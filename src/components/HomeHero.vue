@@ -171,10 +171,8 @@ export default defineComponent({
   }
 }
 #hero {
-  height: calc(100vh - 212px);
   max-width 1280px
-  padding-top 2rem
-  padding-bottom 5rem
+  padding-top 5rem
   margin 1rem
   grid-template-columns 2fr 3fr
   grid-column-gap 0px
@@ -221,7 +219,7 @@ export default defineComponent({
     transition .5s transform ease-in-out;
   }
   .mask span:nth-child(1) {
-    background-image linear-gradient(45deg, #0cd3ff 10%, #fff 90%);
+    background-image linear-gradient(45deg, rgba(35, 100, 210, 1) 10%, #fff 90%);
   }
   .mask span:nth-child(2) {
     background-image linear-gradient(45deg, #ffe807 10%, #fff 90%);
@@ -253,7 +251,7 @@ export default defineComponent({
     color: #fff;
     border: 3px solid rgba(255, 255, 255, 1);
     letter-spacing: 3px;
-    background linear-gradient(135deg, #0cd3ff 25%, #ff3b59 25%)
+    background linear-gradient(135deg, rgba(35, 100, 210, 0.6) 25%, rgba(255, 59, 89, 0.6) 25%);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: 1s;
   }

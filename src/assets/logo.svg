@@ -11,7 +11,7 @@
 
       .logo-2 {
         fill: none;
-        stroke: #3fa9f5;
+        stroke: rgba(35, 100, 210, 1);
         stroke-miterlimit: 10;
         stroke-width: 3px;
       }
