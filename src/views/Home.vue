@@ -1,8 +1,8 @@
 <template>
   <div>
     <div id="mask"></div>
-    <video playsinline autoplay muted loop poster="src/assets/video/bg.jpg" id="bgvideo">
-      <source src="src/assets/video/bg.mp4" type="video/mp4">
+    <video playsinline autoplay muted loop poster="video/bg.jpg" id="bgvideo">
+      <source src="video/bg.mp4" type="video/mp4">
     </video>
     <Feature />
   </div>
