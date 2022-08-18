@@ -109,7 +109,8 @@
   </div>
 </template>
 
-<script lang="ts"></script>
+<script lang="ts">
+</script>
 
 <style scoped lang="stylus">
 #feature {
@@ -179,15 +180,15 @@
 }
 
 .c1:hover svg {
-  fill: #EC9B3B;
+  fill: #ff3b59;
 }
 
 .c2:hover #wasm {
-  fill: #654ff0;
+  fill: #0cd3ff;
 }
 
 .c3:hover svg {
-  fill: #eb0072;
+  fill: #ffe807;
 }
 
 .cl {
@@ -238,7 +239,7 @@
 }
 
 .c1:hover .cs-c1 {
-  background: #EC9B3B;
+  background: #ff3b59;
 }
 
 .c1:hover .cs-c1 .ot {
@@ -247,7 +248,7 @@
 }
 
 .c2:hover .cs-c2 {
-  background: rgb(101, 79, 240);
+  background: #0cd3ff;
 }
 .c2:hover .cs-c2 .ot {
   color: #fff;
@@ -255,7 +256,7 @@
 }
 
 .c3:hover .cs-c3 {
-  background: #eb0072;
+  background: #ffe807;
 }
 .c3:hover .cs-c3 .ot {
   color: #fff;

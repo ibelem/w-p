@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div id ="degree"></div>
+    <div id="mask"></div>
+    <video playsinline autoplay muted loop poster="src/assets/video/bg.jpg" id="bgvideo">
+      <source src="src/assets/video/bg.mp4" type="video/mp4">
+    </video>
     <Feature />
   </div>
 </template>
@@ -20,9 +23,9 @@ export default defineComponent({
     const rInt = randomInt(50, 100);
 
     const items = [
-      '#f00056', '#c93756', '#f20c00', '#c93756', '#ff0097', '#be002f', '#00a3ff', '#9d2933',
-      '#9b4400', '#0eb83a', '#1bd1a5', '#30F197', '#00e09e', '#424c50', '#2edfa3', '#e406f9',
-      '#8d4bbb', '#003371', '#177cb0', 'rgba(12, 211, 255, 1.0)', '#4b5cc4', '#3b2e7e', '#ffffff'
+      '#f00056', '#c93756', '#ff0097', '#00a3ff',
+      '#0eb83a', '#03ebc3', '#424c50', '#ff3b59',
+      '#8d4bbb', '#003371', '#177cb0', '#0cd3ff', '#4b5cc4', '#3b2e7e', '#ffffff'
     ];
 
     const degrees = [
@@ -36,14 +39,23 @@ export default defineComponent({
     const getDegree3 = () => degrees[Math.floor(Math.random() * degrees.length)];
     const getDegree4 = () => degrees[Math.floor(Math.random() * degrees.length)];
 
+    const bgcolor = () => {
+      if (window.screen.availWidth <= 420) {
+        document.querySelector('.header')?.setAttribute('style',
+          `background-image: linear-gradient(${getDegree()}deg, ${getColor()} 108%, #ffffff 100%), 
+          linear-gradient(${getDegree2()}deg, #0cd3ff 86%, #ff3b59 10%), 
+          linear-gradient(${getDegree3()}deg, #ff3b59 100%, ${getColor()} 100%), 
+          linear-gradient(${getDegree4()}deg, ${getColor()} ${rInt}%, #0cd3ff 43%)
+          `,
+        );
+      } else {
+        document.querySelector('.header')?.setAttribute('style', 'background-image: none');
+      }
+    };
+
     onMounted(() => {
-      document.querySelector('.home .header')?.setAttribute('style',
-        `background-image: linear-gradient(${getDegree()}deg, ${getColor()} 108%, #ffffff 100%), 
-        linear-gradient(${getDegree2()}deg, #30F197 86%, #e406f9 10%), 
-        linear-gradient(${getDegree3()}deg, #e406f9 100%, ${getColor()} 100%), 
-        linear-gradient(${getDegree4()}deg, ${getColor()} ${rInt}%, #30F197 43%)
-        `,
-      );
+      bgcolor();
+      window.addEventListener('orientationchange', bgcolor, false);
     });
 
     onUnmounted(() => {
@@ -53,4 +65,23 @@ export default defineComponent({
 });
 </script>
 
-<style scoped lang="stylus"></style>
+<style scoped lang="stylus">
+#bgvideo {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+#mask {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+</style>

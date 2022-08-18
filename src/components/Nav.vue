@@ -40,14 +40,14 @@ export default defineComponent({
           path: '/libs',
         },
         {
-          name: 'Editor',
-          isActive: false,
-          path: '/editor',
-        },
-        {
           name: 'Docs',
           isActive: false,
           path: '/docs',
+        },
+        {
+          name: 'About',
+          isActive: false,
+          path: '/about',
         },
       ],
 
@@ -104,7 +104,7 @@ nav {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: rgba(12, 211, 255, 0.8);
+    background-color: rgba(0, 199, 253, 0.8);
     position: relative;
     left: 0;
     bottom: -1.6rem;

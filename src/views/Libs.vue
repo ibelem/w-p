@@ -1,7 +1,7 @@
 <template>
   <div id="lib" class="">
     <section class="rh">
-      <h2>Find public Webnized Web Assembly (Wasm)
+      <h2>Explore public Webnized Web Assembly (Wasm)
         and JavaScript libraries for your Web applications.</h2>
     </section>
     <div class="fsw">
@@ -185,13 +185,13 @@ export default defineComponent({
   --boxShadow: 0 2px 5px rgba(#333, 0.2);
   --backgroundColor: #fff;
   --foregroundColor: #111;
-  --primaryColor: rgba(12, 211, 255, 1);
+  --primaryColor: #00c7fd;
   --primaryShade1: #e1f5fe;
   --primaryShade2: #b3e5fc;
-  --primaryShade3: #4fc3f7;
+  --primaryShade3: #00c7fd;
   --primaryShade4: #03a9f4;
   --primaryShade5: #0277bd;
-  --secondaryColor: #673ab7;
+  --secondaryColor: #ff3b59;
 }
 
 /*overall layout*/
@@ -208,8 +208,8 @@ export default defineComponent({
 }
 
 .rh h2 {
-  font-size: 16px;
-  margin-bottom: 3rem;
+  font-size: 14px;
+  font-weight: 400;
   color: #333;
 }
 
@@ -363,7 +363,7 @@ button:hover,
 button.hover {
   color: #fff;
   letter-spacing: 2px;
-  background: linear-gradient(135deg, #0cd3ff 25%, #30F197 25%, #e406f9 25%);
+  background: linear-gradient(135deg, #0cd3ff 25%, #ff3b59 25%);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: 1s;
 }
@@ -372,18 +372,18 @@ input.button:active,
 input.button.active,
 button:active,
 button.active {
-  background: linear-gradient(135deg, #0cd3ff 25%, #30F197 25%, #e406f9 25%);
+  background: linear-gradient(135deg, #0cd3ff 25%, #ff3b59 25%);
   outline: none;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   top: 0;
 }
 
 a.external {
-  background: #e406f9;
+  background: #ff3b59;
 }
 
 a.external:hover {
-  background: linear-gradient(135deg, #0cd3ff 25%, #30F197 25%, #e406f9 25%);
+  background: linear-gradient(135deg, #0cd3ff 25%, #ff3b59 25%);
 }
 
 a.button.disabled,
@@ -550,7 +550,7 @@ button.small {
     overflow: hidden;
   }
   .rh h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   .fs {
     margin: 0 0 2rem 0;

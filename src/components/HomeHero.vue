@@ -76,7 +76,6 @@
 
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
-
 export default defineComponent({
   name: 'HomeHero',
   components: {},
@@ -111,82 +110,68 @@ export default defineComponent({
   stroke: #fff;
   stroke-width: 3px;
 }
-
 .cls-1,
 .cls-5 {
   stroke-miterlimit: 10;
 }
-
 .cls-1,
 .cls-2,
 .cls-3,
 .cls-4 {
   opacity: 1.0;
 }
-
 .cls-2 {
   font-size: 24px;
 }
-
 .cls-2,
 .cls-3,
 .cls-7 {
   fill: #fff;
 }
-
 .cls-2,
 .cls-3 {
   font-family: Poppins-Regular, Poppins;
 }
-
 .cls-3 {
   font-size: 18px;
 }
-
 .cls-6 {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-
 #shortterm {
   animation: rotate 4s linear infinite;
   transform-box: fill-box;
   transform-origin: center;
 }
-
 #longterm {
   animation: rotate 15s linear infinite;
   transform-box: fill-box;
   transform-origin: center;
 }
-
 #chrome {
   animation: rotate 50s linear infinite;
   transform-box: fill-box;
   transform-origin: center;
 }
-
 @keyframes rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
 #arrow1 {
   animation: blink-animation 2s steps(5, start) infinite;
 }
-
 #arrow2 {
   animation: blink-animation 2s steps(5, start) infinite;
   animation-delay: 1s;
 }
-
 @keyframes blink-animation {
   to {
     visibility: hidden;
   }
 }
-
 #hero {
+  height: calc(100vh - 212px);
   max-width 1280px
   padding-top 2rem
   padding-bottom 5rem
@@ -197,22 +182,18 @@ export default defineComponent({
   justify-items center
   align-items center
   text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px;
-
   .description{
     padding 1rem 2rem
     text-align left
   }
-
   h4 {
     margin-bottom 0px
   }
-
   h2 {
     font-size 45px
     line-height 1.06
     color #fff
   }
-
   .mask {
     height 47px;
     position relative;
@@ -220,7 +201,6 @@ export default defineComponent({
     width 102px;
     display inline-block
   }
-
   .mask span {
     display inline-block;
     box-sizing border-box;
@@ -232,60 +212,52 @@ export default defineComponent({
     -webkit-text-fill-color transparent;
     background-repeat no-repeat;
   }
-
   .mask span[data-show] {
     transform translateY(-100%);
     transition .5s transform ease-in-out;
   }
-
   .mask span[data-up] {
     transform translateY(-200%);
     transition .5s transform ease-in-out;
   }
-
   .mask span:nth-child(1) {
     background-image linear-gradient(45deg, #0cd3ff 10%, #fff 90%);
   }
-
   .mask span:nth-child(2) {
-    background-image linear-gradient(45deg, #EC9B3B 10%, #fff 90%);
+    background-image linear-gradient(45deg, #ffe807 10%, #fff 90%);
   }
-
   .mask span:nth-child(3) {
-    background-image linear-gradient(45deg, #e406f9 10%, #fff 90%);
+    background-image linear-gradient(45deg, #ff3b59 10%, #fff 90%);
   }
-
   span {
     display inline-block
   }
-
   a {
     display: inline-block;
     font-size: 1em;
-    background: #fff;
+    border: 3px solid rgba(255, 255, 255, 0.8);
     padding: 10px 30px;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 500;
     margin-top: 10px;
-    color: #111;
+    color: rgba(255, 255, 255, 0.8);
     border-radius: 3px;
     letter-spacing: 2px;
     transition: 0.2s;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     text-shadow: rgba(0, 0, 0, 0) 1px 1px 1px;
   }
-
   a:hover
   {
     color: #fff;
+    border: 3px solid rgba(255, 255, 255, 1);
     letter-spacing: 3px;
-    background linear-gradient(135deg, #0cd3ff 25%, #30F197 25%, #e406f9 25%)
+    background linear-gradient(135deg, #0cd3ff 25%, #ff3b59 25%)
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: 1s;
   }
 }
-
 @media only screen and (max-width: 640px) {
   #hero {
     max-width: 640px;
@@ -293,29 +265,23 @@ export default defineComponent({
     grid-template-rows: 1fr 1fr;
     padding: 0px;
   }
-
   #hero .description {
     padding: 0;
   }
-
   #hero h2 {
     font-size: 40px;
   }
-
   #hero .mask {
     height: 40px;
     width: 92px;
   }
-
   #hero .mask span {
     top: 46px;
   }
-
   #hero svg {
     width: 90vw;
   }
 }
-
 @media screen and (min-width: 641px) and (max-width: 1024px) {
   #wrap, .content, #hero {
     max-width: auto;
@@ -324,7 +290,6 @@ export default defineComponent({
     width: 44vw;
   }
 }
-
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
   #wrap, .content, #hero {
     max-width: auto;
